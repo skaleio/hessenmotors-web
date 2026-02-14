@@ -13,6 +13,8 @@ import suzukiJimny from "@/assets/Fotos Vehículos_ Hessen Motors/Suzuki 4X4/1.j
 import jacJs4 from "@/assets/Fotos Vehículos_ Hessen Motors/Jac/1.jpg";
 import kiaSonet from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Sonet 2021/1.jpg";
 import toyotaRush from "@/assets/Fotos Vehículos_ Hessen Motors/Toyota/Rush 2021/1.jpg";
+import mgGt from "@/assets/Fotos Vehículos_ Hessen Motors/MG/1.jpg";
+import bmwX1 from "@/assets/Fotos Vehículos_ Hessen Motors/Bmw/X1 2022/1.jpeg";
 
 // Mapeo de nombres de imágenes a imports
 export const vehicleImages: Record<string, string> = {
@@ -30,6 +32,8 @@ export const vehicleImages: Record<string, string> = {
   "jac-js4-2021.jpg": jacJs4,
   "kia-sonet-2021.jpg": kiaSonet,
   "toyota-rush-2021.jpg": toyotaRush,
+  "mg-gt-2023.jpg": mgGt,
+  "bmw-x1-2022.jpeg": bmwX1,
 };
 
 export const getVehicleImage = (imageName: string) => {
@@ -52,6 +56,7 @@ export interface Vehicle {
   image: string;
   sunroof?: boolean;
   priceNote?: string;
+  sold?: boolean;
 }
 
 export const vehicles: Vehicle[] = [
@@ -160,7 +165,7 @@ export const vehicles: Vehicle[] = [
     traction: "Por definir",
     minPayment: 3500000,
     location: "La Serena",
-    priceNote: "Consignación $10.200.000",
+    priceNote: "$10.200.000",
     image: "chevrolet-groove-2022.jpg",
   },
   {
@@ -237,6 +242,7 @@ export const vehicles: Vehicle[] = [
     minPayment: 3600000,
     location: "La Serena",
     image: "kia-sonet-2021.jpg",
+    sold: true,
   },
   {
     id: 15,
@@ -268,6 +274,37 @@ export const vehicles: Vehicle[] = [
     location: "La Serena",
     sunroof: true,
     image: "hyundai-veloster-2016.jpg",
+  },
+  {
+    id: 17,
+    brand: "MG",
+    model: "GT",
+    year: 2023,
+    price: 9990000,
+    km: "60.000 km",
+    fuel: "Bencina",
+    transmission: "Manual 6 velocidades",
+    engine: "1.5 aspirado · 112 HP · 150 Nm",
+    traction: "Delantera (FWD)",
+    minPayment: 3000000,
+    location: "La Serena",
+    image: "mg-gt-2023.jpg",
+    sold: true,
+  },
+  {
+    id: 18,
+    brand: "BMW",
+    model: "X1 SDrive18D",
+    year: 2020,
+    price: 30990000,
+    km: "45.000 km",
+    fuel: "Diésel",
+    transmission: "Automática Steptronic 7 velocidades",
+    engine: "2.0 diésel TwinPower Turbo · 150 CV · 360 Nm",
+    traction: "Delantera (FWD)",
+    minPayment: 9300000,
+    location: "La Serena",
+    image: "bmw-x1-2022.jpeg",
   },
 ];
 
@@ -316,6 +353,8 @@ export const getVehicleImages = async (vehicle: Vehicle): Promise<string[]> => {
     14: ['Kia/Sonet 2021', 'Kia\\Sonet 2021'], // KIA Sonet 2021
     15: ['Toyota/Rush 2021', 'Toyota\\Rush 2021'], // Toyota Rush 2021
     16: ['Hyundai/Veloster 2016', 'Hyundai\\Veloster 2016'], // Hyundai Veloster 2016
+    17: ['MG'], // MG GT 2023
+    18: ['Bmw/X1 2022', 'Bmw\\X1 2022'], // BMW X1 SDrive18D
   };
 
   const patterns = pathPatterns[vehicle.id] || [];

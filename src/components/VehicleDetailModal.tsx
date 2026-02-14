@@ -77,6 +77,7 @@ const VehicleDetailModal = ({ vehicle, isOpen, onClose }: VehicleDetailModalProp
             images={vehicleImages} 
             vehicleName={`${vehicle.brand} ${vehicle.model}`}
             year={vehicle.year}
+            sold={vehicle.sold}
           />
 
           {/* Grid de información */}

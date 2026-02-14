@@ -7,9 +7,10 @@ interface ImageCarouselProps {
   images: string[];
   vehicleName: string;
   year?: number;
+  sold?: boolean;
 }
 
-const ImageCarousel = ({ images, vehicleName, year }: ImageCarouselProps) => {
+const ImageCarousel = ({ images, vehicleName, year, sold }: ImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -57,9 +58,11 @@ const ImageCarousel = ({ images, vehicleName, year }: ImageCarouselProps) => {
             {currentIndex + 1} / {images.length}
           </div>
         </div>
-        <div className="absolute top-4 left-4 px-3 py-1 bg-primary/90 backdrop-blur-sm rounded-full text-xs font-semibold">
-          CONSIGNACIÓN
-        </div>
+        {sold && (
+          <div className="absolute top-4 left-4 px-3 py-1 bg-green-600/90 backdrop-blur-sm rounded-full text-xs font-semibold text-white">
+            VENDIDO
+          </div>
+        )}
 
         {/* Botones de navegación */}
         {images.length > 1 && (

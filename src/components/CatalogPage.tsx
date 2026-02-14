@@ -242,11 +242,11 @@ const CatalogPage = () => {
                     <div className="absolute top-4 right-4 px-3 py-1 bg-background/80 backdrop-blur-sm rounded-full text-sm font-medium">
                       {vehicle.year}
                     </div>
-                    
-                    {/* Consignación badge */}
-                    <div className="absolute top-4 left-4 px-3 py-1 bg-primary/90 backdrop-blur-sm rounded-full text-xs font-semibold">
-                      CONSIGNACIÓN
-                    </div>
+                    {vehicle.sold && (
+                      <div className="absolute top-4 left-4 px-3 py-1 bg-green-600/90 backdrop-blur-sm rounded-full text-xs font-semibold text-white">
+                        VENDIDO
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}

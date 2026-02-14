@@ -2,7 +2,12 @@ import fs from "fs/promises";
 import path from "path";
 import sharp from "sharp";
 
-const ROOT_DIR = path.resolve("src/assets/Fotos Vehículos_ Hessen Motors");
+// Opcional: subcarpeta, ej. "MG" para solo optimizar imágenes del MG
+const SUBFOLDER = process.argv[2] || "";
+const ROOT_DIR = path.resolve(
+  "src/assets/Fotos Vehículos_ Hessen Motors",
+  SUBFOLDER
+);
 const MAX_WIDTH = 1600;
 const QUALITY = 75;
 const MIN_SIZE_BYTES = 250 * 1024;
@@ -36,8 +41,9 @@ const optimizeImage = async (filePath) => {
     const image = sharp(filePath);
     const metadata = await image.metadata();
     const resizeNeeded = metadata.width && metadata.width > MAX_WIDTH;
-
-    if (!resizeNeeded && stats.size < MIN_SIZE_BYTES * 2) {
+    // Si se pasó una subcarpeta (ej. MG), siempre comprimir; si no, omitir archivos ya pequeños
+    const forceOptimize = !!SUBFOLDER;
+    if (!forceOptimize && !resizeNeeded && stats.size < MIN_SIZE_BYTES * 2) {
       return { skipped: true, reason: "small-enough" };
     }
 
