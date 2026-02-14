@@ -13,7 +13,7 @@ import suzukiJimny from "@/assets/Fotos Vehículos_ Hessen Motors/Suzuki 4X4/1.j
 import jacJs4 from "@/assets/Fotos Vehículos_ Hessen Motors/Jac/1.jpg";
 import kiaSonet from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Sonet 2021/1.jpg";
 import toyotaRush from "@/assets/Fotos Vehículos_ Hessen Motors/Toyota/Rush 2021/1.jpg";
-import mgGt from "@/assets/Fotos Vehículos_ Hessen Motors/MG/1.jpg";
+import mgGt from "@/assets/Fotos Vehículos_ Hessen Motors/Mg/1.jpg";
 import bmwX1 from "@/assets/Fotos Vehículos_ Hessen Motors/Bmw/X1 2022/1.jpeg";
 
 // Mapeo de nombres de imágenes a imports
