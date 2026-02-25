@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -46,6 +46,13 @@
       }
     </script>
     <!-- End Meta Pixel Code -->
+    <!-- Estilos críticos: mismo tema que la app para evitar pantalla negra o contenido invisible en producción -->
+    <style>
+      html { background-color: #0a0a0a; }
+      html.dark { background-color: #0a0a0a; }
+      body { background-color: #0a0a0a; color: #fff; min-height: 100vh; }
+      #root { min-height: 100vh; }
+    </style>
   </head>
 
   <body>
