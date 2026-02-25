@@ -231,9 +231,6 @@ const CatalogPage = () => {
                       src={getVehicleImage(vehicle.image)}
                       alt={`${vehicle.brand} ${vehicle.model}`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      width={400}
-                      height={300}
-                      loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = "https://via.placeholder.com/600x400/1a1a1a/ffffff?text=" + encodeURIComponent(`${vehicle.brand} ${vehicle.model}`);

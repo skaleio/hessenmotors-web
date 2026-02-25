@@ -182,9 +182,6 @@ const WhatsAppFloatingButton = () => {
                     src={whatsappLogo} 
                     alt="Hessen Motors" 
                     className="w-full h-full object-cover rounded-full"
-                    width={40}
-                    height={40}
-                    loading="lazy"
                   />
                 </div>
                 <span className="text-white font-semibold text-lg">HessenMotors</span>

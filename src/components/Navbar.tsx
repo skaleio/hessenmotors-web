@@ -77,7 +77,7 @@ const Navbar = () => {
               onClick={handleLogoClick}
               className="flex-shrink-0 md:static absolute left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 mt-4 md:mt-6"
             >
-              <img src={hessenLogo} alt="Hessen Motors" className="h-48 md:h-64" width={256} height={64} fetchPriority="high" />
+              <img src={hessenLogo} alt="Hessen Motors" className="h-48 md:h-64" />
             </Link>
 
             {/* Desktop Navigation */}

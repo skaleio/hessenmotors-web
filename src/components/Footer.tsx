@@ -32,7 +32,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-2"
           >
-            <img src={hessenLogo} alt="Hessen Motors" className="w-48 mb-4" width={192} height={48} loading="lazy" />
+            <img src={hessenLogo} alt="Hessen Motors" className="w-48 mb-4" />
             <p className="text-muted-foreground max-w-md mb-6">
               Autos premium seleccionados con excelencia automotriz. Confianza, transparencia y calidad en cada vehículo.
             </p>
@@ -59,7 +59,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
           >
-            <h3 className="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+            <h4 className="text-lg font-bold mb-4">Enlaces Rápidos</h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -81,7 +81,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-lg font-bold mb-4">Contacto</h3>
+            <h4 className="text-lg font-bold mb-4">Contacto</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-4 h-4 text-primary" />
