@@ -16,6 +16,8 @@ import toyotaRush from "@/assets/Fotos Vehículos_ Hessen Motors/Toyota/Rush 202
 import mgGt from "@/assets/Fotos Vehículos_ Hessen Motors/Mg/1.jpg";
 import bmwX1 from "@/assets/Fotos Vehículos_ Hessen Motors/Bmw/X1 2022/1.jpeg";
 import mazdaCx5 from "@/assets/Fotos Vehículos_ Hessen Motors/Mazda/CX-5 2024/1.jpeg";
+import kiaMorning from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Morning 2018/WhatsApp Image 2026-02-24 at 23.52.41.jpeg";
+import cheryTiggo7 from "@/assets/Fotos Vehículos_ Hessen Motors/Chery/Tiggo 7 PRO/WhatsApp Image 2026-02-24 at 23.52.01.jpeg";
 
 // Mapeo de nombres de imágenes a imports
 export const vehicleImages: Record<string, string> = {
@@ -36,6 +38,8 @@ export const vehicleImages: Record<string, string> = {
   "mg-gt-2023.jpg": mgGt,
   "bmw-x1-2022.jpeg": bmwX1,
   "mazda-cx5-2024.jpeg": mazdaCx5,
+  "kia-morning-2018.jpeg": kiaMorning,
+  "chery-tiggo7-2021.jpeg": cheryTiggo7,
 };
 
 export const getVehicleImage = (imageName: string) => {
@@ -325,6 +329,36 @@ export const vehicles: Vehicle[] = [
     image: "mazda-cx5-2024.jpeg",
     sold: true,
   },
+  {
+    id: 20,
+    brand: "KIA",
+    model: "Morning",
+    year: 2018,
+    price: 7490000,
+    km: "73.000 km",
+    fuel: "Bencina",
+    transmission: "Manual",
+    engine: "1.2 · 4 cilindros",
+    traction: "Delantera (FWD)",
+    minPayment: 2250000,
+    location: "La Serena",
+    image: "kia-morning-2018.jpeg",
+  },
+  {
+    id: 21,
+    brand: "Chery",
+    model: "Tiggo 7 Pro Max",
+    year: 2021,
+    price: 12990000,
+    km: "55.000 km",
+    fuel: "Bencina",
+    transmission: "Automática CVT",
+    engine: "1.5 Turbo · 145 HP · 230 Nm",
+    traction: "Delantera (FWD)",
+    minPayment: 3900000,
+    location: "La Serena",
+    image: "chery-tiggo7-2021.jpeg",
+  },
 ];
 
 export const formatPrice = (price: number) => {
@@ -375,6 +409,8 @@ export const getVehicleImages = async (vehicle: Vehicle): Promise<string[]> => {
     17: ['MG'], // MG GT 2023
     18: ['Bmw/X1 2022', 'Bmw\\X1 2022'], // BMW X1 SDrive18D
     19: ['Mazda/CX-5 2024', 'Mazda\\CX-5 2024'], // Mazda CX-5 2024
+    20: ['Kia/Morning 2018', 'Kia\\Morning 2018'], // KIA Morning 2018
+    21: ['Chery/Tiggo 7 PRO', 'Chery\\Tiggo 7 PRO'], // Chery Tiggo 7 Pro Max
   };
 
   const patterns = pathPatterns[vehicle.id] || [];

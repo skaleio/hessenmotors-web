@@ -1,0 +1,19 @@
+---
+description: Optimizar imágenes solo de vehículos nuevos cuando el usuario diga "optimiza"
+alwaysApply: true
+---
+
+# Optimizar imágenes después de agregar vehículos
+
+Cuando el usuario diga **"optimiza"** (o similar) después de haber agregado autos nuevos:
+
+1. **No ejecutes** `npm run optimize:images` sobre toda la carpeta (tarda mucho y la mayoría ya está optimizada).
+2. **Ejecuta la optimización solo para las carpetas de los vehículos recién agregados**, usando el argumento de subcarpeta del script:
+   - Un solo vehículo nuevo:  
+     `npm run optimize:images -- "Marca/Modelo Año"`  
+     Ejemplo: `npm run optimize:images -- "Kia/Morning 2018"`
+   - Varios vehículos nuevos: **una ejecución por carpeta**:
+     - `npm run optimize:images -- "Kia/Morning 2018"`
+     - `npm run optimize:images -- "Chery/Tiggo 7 PRO"`
+3. La ruta debe coincidir con la carpeta bajo `src/assets/Fotos Vehículos_ Hessen Motors/` (respetar mayúsculas y espacios: "Tiggo 7 PRO", "Morning 2018", etc.).
+4. Si no recuerdas qué carpetas se agregaron en la misma conversación, usa las rutas que se usaron en `pathPatterns` o en los imports de `vehicles.ts` para esos vehículos nuevos.
