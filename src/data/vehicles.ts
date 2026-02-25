@@ -17,7 +17,7 @@ import mgGt from "@/assets/Fotos Vehículos_ Hessen Motors/Mg/1.jpg";
 import bmwX1 from "@/assets/Fotos Vehículos_ Hessen Motors/Bmw/X1 2022/1.jpeg";
 import mazdaCx5 from "@/assets/Fotos Vehículos_ Hessen Motors/Mazda/CX-5 2024/1.jpeg";
 import kiaMorning from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Morning 2018/WhatsApp Image 2026-02-24 at 23.52.41.jpeg";
-import cheryTiggo7 from "@/assets/Fotos Vehículos_ Hessen Motors/Chery/Tiggo 7 PRO/WhatsApp Image 2026-02-24 at 23.52.01.jpeg";
+import cheryTiggo7 from "@/assets/Fotos Vehículos_ Hessen Motors/Chery/Tiggo 7 PRO/1.jpeg";
 
 // Mapeo de nombres de imágenes a imports
 export const vehicleImages: Record<string, string> = {
