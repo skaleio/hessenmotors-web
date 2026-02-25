@@ -51,6 +51,9 @@ const VehiclesSection = () => {
                     src={getVehicleImage(vehicle.image)}
                     alt={`${vehicle.brand} ${vehicle.model}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    width={400}
+                    height={300}
+                    loading="lazy"
                     onError={(e) => {
                       // Placeholder si la imagen no existe aún
                       const target = e.target as HTMLImageElement;

@@ -15,6 +15,7 @@ import kiaSonet from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Sonet 2021/1.
 import toyotaRush from "@/assets/Fotos Vehículos_ Hessen Motors/Toyota/Rush 2021/1.jpg";
 import mgGt from "@/assets/Fotos Vehículos_ Hessen Motors/Mg/1.jpg";
 import bmwX1 from "@/assets/Fotos Vehículos_ Hessen Motors/Bmw/X1 2022/1.jpeg";
+import mazdaCx5 from "@/assets/Fotos Vehículos_ Hessen Motors/Mazda/CX-5 2024/1.jpeg";
 
 // Mapeo de nombres de imágenes a imports
 export const vehicleImages: Record<string, string> = {
@@ -34,6 +35,7 @@ export const vehicleImages: Record<string, string> = {
   "toyota-rush-2021.jpg": toyotaRush,
   "mg-gt-2023.jpg": mgGt,
   "bmw-x1-2022.jpeg": bmwX1,
+  "mazda-cx5-2024.jpeg": mazdaCx5,
 };
 
 export const getVehicleImage = (imageName: string) => {
@@ -227,6 +229,7 @@ export const vehicles: Vehicle[] = [
     minPayment: 3300000,
     location: "La Serena",
     image: "jac-js4-2021.jpg",
+    sold: true,
   },
   {
     id: 14,
@@ -306,6 +309,22 @@ export const vehicles: Vehicle[] = [
     location: "La Serena",
     image: "bmw-x1-2022.jpeg",
   },
+  {
+    id: 19,
+    brand: "Mazda",
+    model: "CX-5",
+    year: 2024,
+    price: 22990000,
+    km: "20.000 km",
+    fuel: "Bencina",
+    transmission: "Automática",
+    engine: "2.0 Skyactiv-G · 4 cilindros",
+    traction: "Delantera (FWD)",
+    minPayment: 6900000,
+    location: "La Serena",
+    image: "mazda-cx5-2024.jpeg",
+    sold: true,
+  },
 ];
 
 export const formatPrice = (price: number) => {
@@ -355,6 +374,7 @@ export const getVehicleImages = async (vehicle: Vehicle): Promise<string[]> => {
     16: ['Hyundai/Veloster 2016', 'Hyundai\\Veloster 2016'], // Hyundai Veloster 2016
     17: ['MG'], // MG GT 2023
     18: ['Bmw/X1 2022', 'Bmw\\X1 2022'], // BMW X1 SDrive18D
+    19: ['Mazda/CX-5 2024', 'Mazda\\CX-5 2024'], // Mazda CX-5 2024
   };
 
   const patterns = pathPatterns[vehicle.id] || [];

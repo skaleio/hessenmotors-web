@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* HESSEN MOTORS - Premium Automotive Design System */
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+/* HESSEN MOTORS - Premium Automotive Design System (fuentes cargadas desde index.html) */
 
 @layer base {
   :root {
@@ -27,9 +25,9 @@
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted grays */
+    /* Muted grays - 72% para cumplir contraste WCAG AA */
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted-foreground: 0 0% 72%;
 
     /* Accent for subtle highlights */
     --accent: 0 0% 10%;
@@ -74,7 +72,7 @@
     --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted-foreground: 0 0% 72%;
     --accent: 0 0% 10%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;

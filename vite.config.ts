@@ -19,11 +19,21 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "dist",
-    emptyOutDir: true, // Limpia el directorio antes de cada build
-    sourcemap: false,
+    emptyOutDir: true,
+    sourcemap: true, // PageSpeed: source maps para JS propio de gran tamaño
     rollupOptions: {
       output: {
-        manualChunks: undefined,
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("react-dom") || id.includes("react/")) return "react";
+            if (id.includes("framer-motion")) return "framer-motion";
+            if (id.includes("react-router")) return "router";
+            if (id.includes("@radix-ui")) return "radix";
+            if (id.includes("lucide-react")) return "lucide";
+            if (id.includes("recharts")) return "recharts";
+            return "vendor";
+          }
+        },
       },
     },
   },

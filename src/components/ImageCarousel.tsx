@@ -45,6 +45,9 @@ const ImageCarousel = ({ images, vehicleName, year, sold }: ImageCarouselProps) 
           src={images[currentIndex]}
           alt={`${vehicleName} - Imagen ${currentIndex + 1}`}
           className="max-w-full max-h-full w-auto h-auto object-contain transition-transform duration-300"
+          width={800}
+          height={600}
+          loading="lazy"
         />
         
         {/* Badges */}
@@ -105,6 +108,9 @@ const ImageCarousel = ({ images, vehicleName, year, sold }: ImageCarouselProps) 
                 src={image}
                 alt={`${vehicleName} - Miniatura ${index + 1}`}
                 className="w-full h-full object-cover"
+                width={100}
+                height={100}
+                loading="lazy"
               />
             </button>
           ))}
