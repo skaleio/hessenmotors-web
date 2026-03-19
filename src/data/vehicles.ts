@@ -16,8 +16,12 @@ import toyotaRush from "@/assets/Fotos Vehículos_ Hessen Motors/Toyota/Rush 202
 import mgGt from "@/assets/Fotos Vehículos_ Hessen Motors/Mg/1.jpg";
 import bmwX1 from "@/assets/Fotos Vehículos_ Hessen Motors/Bmw/X1 2022/1.jpeg";
 import mazdaCx5 from "@/assets/Fotos Vehículos_ Hessen Motors/Mazda/CX-5 2024/1.jpeg";
-import kiaMorning from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Morning 2018/WhatsApp Image 2026-02-24 at 23.52.41.jpeg";
+import kiaMorning from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Morning 2018/1.jpeg";
 import cheryTiggo7 from "@/assets/Fotos Vehículos_ Hessen Motors/Chery/Tiggo 7 PRO/1.jpeg";
+import dodgeRam700 from "@/assets/Fotos Vehículos_ Hessen Motors/Dodge/700 Año 2022/1.jpeg";
+import kiaMorning2023 from "@/assets/Fotos Vehículos_ Hessen Motors/Kia/Kia Morning 1.2 año 2023 - Blanco - Automático/1.jpeg";
+import hyundaiTucson from "@/assets/Fotos Vehículos_ Hessen Motors/Hyundai/Tucson 2017/1.jpeg";
+import bmw320iM from "@/assets/Fotos Vehículos_ Hessen Motors/Bmw/2021 BMW 320i M Performance/1.jpeg";
 
 // Mapeo de nombres de imágenes a imports
 export const vehicleImages: Record<string, string> = {
@@ -40,6 +44,10 @@ export const vehicleImages: Record<string, string> = {
   "mazda-cx5-2024.jpeg": mazdaCx5,
   "kia-morning-2018.jpeg": kiaMorning,
   "chery-tiggo7-2021.jpeg": cheryTiggo7,
+  "dodge-ram700.jpeg": dodgeRam700,
+  "kia-morning-2023.jpeg": kiaMorning2023,
+  "hyundai-tucson-2017.jpeg": hyundaiTucson,
+  "bmw-320i-m-2021.jpeg": bmw320iM,
 };
 
 export const getVehicleImage = (imageName: string) => {
@@ -359,6 +367,68 @@ export const vehicles: Vehicle[] = [
     location: "La Serena",
     image: "chery-tiggo7-2021.jpeg",
   },
+  {
+    id: 22,
+    brand: "Dodge",
+    model: "Ram 700",
+    year: 2022,
+    price: 0,
+    km: "Consultar",
+    fuel: "Por definir",
+    transmission: "Por definir",
+    engine: "Por definir",
+    traction: "Por definir",
+    minPayment: 0,
+    location: "La Serena",
+    image: "dodge-ram700.jpeg",
+  },
+  {
+    id: 23,
+    brand: "KIA",
+    model: "Morning",
+    year: 2023,
+    price: 0,
+    km: "Consultar",
+    fuel: "Por definir",
+    transmission: "Por definir",
+    engine: "Por definir",
+    traction: "Por definir",
+    minPayment: 0,
+    location: "La Serena",
+    image: "kia-morning-2023.jpeg",
+  },
+  {
+    id: 24,
+    brand: "Hyundai",
+    model: "Tucson",
+    year: 2017,
+    price: 14990000,
+    km: "90.000 km",
+    fuel: "Diésel",
+    transmission: "Manual 7 velocidades",
+    engine: "2.0L CRDi · 185 HP · 400 Nm",
+    traction: "Delantera (FWD)",
+    minPayment: 4497000,
+    location: "La Serena",
+    image: "hyundai-tucson-2017.jpeg",
+    priceNote: "Pie 30%",
+  },
+  {
+    id: 25,
+    brand: "BMW",
+    model: "320i M Performance",
+    year: 2021,
+    price: 22990000,
+    km: "89.000 km",
+    fuel: "Bencina",
+    transmission: "Automática Steptronic 8 velocidades",
+    engine: "2.0L TwinPower Turbo · 184 HP · 300 Nm",
+    traction: "Trasera (RWD)",
+    minPayment: 6897000,
+    location: "La Serena",
+    image: "bmw-320i-m-2021.jpeg",
+    priceNote: "Pie 30% · 2 dueños",
+  },
 ];
 
 export const formatPrice = (price: number) => {
@@ -411,6 +481,10 @@ export const getVehicleImages = async (vehicle: Vehicle): Promise<string[]> => {
     19: ['Mazda/CX-5 2024', 'Mazda\\CX-5 2024'], // Mazda CX-5 2024
     20: ['Kia/Morning 2018', 'Kia\\Morning 2018'], // KIA Morning 2018
     21: ['Chery/Tiggo 7 PRO', 'Chery\\Tiggo 7 PRO'], // Chery Tiggo 7 Pro Max
+    22: ['Dodge/700 Año 2022', 'Dodge\\700 Año 2022'], // Dodge Ram 700
+    23: ['Kia Morning 1.2 año 2023', 'Kia\\Kia Morning 1.2'], // KIA Morning 2023
+    24: ['Hyundai/Tucson 2017', 'Hyundai\\Tucson 2017'], // Hyundai Tucson 2017
+    25: ['Bmw/2021 BMW 320i M Performance', 'Bmw\\2021 BMW 320i M Performance'], // BMW 320i M Performance 2021
   };
 
   const patterns = pathPatterns[vehicle.id] || [];
